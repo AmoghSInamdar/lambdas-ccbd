@@ -5,7 +5,7 @@ phases:
       - pip install elasticsearch
   install:
     commands:
-      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket hw2-ai2442-lambdas --output-template-file outputsamtemplate.yml
+      - aws cloudformation package --template-file samTemplate.yml --s3-bucket hw2-ai2442-lambdas --output-template-file outputsamtemplate.yml
 artifacts:
   type: zip
   files:
