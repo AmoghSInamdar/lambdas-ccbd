@@ -2,7 +2,7 @@ import json
 import boto3
 import base64
 
-s3 = boto3.resource('s3')
+s3 = boto3.resource('s3') 
 
 def lambda_handler(event, context):
     file, name = event['file'], event['name']
