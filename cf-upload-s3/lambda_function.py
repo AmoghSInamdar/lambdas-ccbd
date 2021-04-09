@@ -4,8 +4,6 @@ import base64
 
 s3 = boto3.resource('s3')
 
-print('hello world')
-
 def lambda_handler(event, context):
     file, name = event['file'], event['name']
     obj = s3.Object('ai2442hw2photos', name)
