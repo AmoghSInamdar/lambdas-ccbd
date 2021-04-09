@@ -54,6 +54,7 @@ def get_labels(event):
             )
         if 'x-amz-meta-customlabels' in head['Metadata']:
             labels = head['Metadata']['x-amz-meta-customlabels']
+            print(labels)
             if type(labels) == list:
                 tags[r].extend(labels)
             else:
@@ -68,3 +69,4 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'tags': tags
     }
+
